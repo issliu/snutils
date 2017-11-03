@@ -1,0 +1,22 @@
+{
+  "name": "snutils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/issliu/snutils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/issliu/snutils/issues"
+  },
+  "homepage": "https://github.com/issliu/snutils#readme",
+  "devDependencies": {
+    "lodash": "^4.17.4"
+  }
+}
