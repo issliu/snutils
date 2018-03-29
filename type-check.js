@@ -8,10 +8,21 @@
 function getTypeOf(variable) {
     let typeStr = Object.prototype.toString.call(variable);
     let res = typeStr.match(/^\[object\s(.*)\]$/);
-    // console.log(res[1]);
+    console.log(res[1], typeof NaN); // 很有意思，typeof NaN 的结果竟然是 number
     return res[1];
 }
 
+function isArray(arr) {
+    return getTypeOf(arr) === '[object Array]';
+}
+function isString(arr) {
+    return getTypeOf(arr) === '[object String]';
+}
+function isNumber(arr) {
+    return getTypeOf(arr) === '[object Number]';
+}
+
+// getTypeOf(NaN); // Number
 // getTypeOf(true);
 // getTypeOf(1);
 // getTypeOf('abc');

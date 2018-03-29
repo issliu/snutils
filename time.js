@@ -1,5 +1,3 @@
-import toInteger from 'lodash/toInteger';
-
 // 判断2个日期对象年月日是否相同
 export function isSameDate(date1, date2) {
     const [d1, d2] = [new Date(date1), new Date(date2)];
@@ -118,15 +116,15 @@ export function getTimeRange(type) {
     console.log({
         startDate: new Date(BeginTime),
         endDate: new Date(EndTime),
-        BeginTime: toInteger(BeginTime),
-        EndTime: toInteger(EndTime)
+        BeginTime: parseInt(BeginTime),
+        EndTime: parseInt(EndTime)
     });
 
     return {
         startDate: new Date(BeginTime),
         endDate: new Date(EndTime),
-        BeginTime: toInteger(BeginTime),
-        EndTime: toInteger(EndTime)
+        BeginTime: parseInt(BeginTime),
+        EndTime: parseInt(EndTime)
     };
 }
 

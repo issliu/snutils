@@ -1,4 +1,4 @@
-class Cookie {
+export class Cookie {
 
     items = [];
 
@@ -52,4 +52,3 @@ class Cookie {
 
 }
 
-export const cookie = new Cookie();
