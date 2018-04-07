@@ -12,15 +12,63 @@ function getTypeOf(variable) {
     return res[1];
 }
 
-function isArray(arr) {
-    return getTypeOf(arr) === '[object Array]';
+function isArray(v) {
+    if(Array.isArray && typeof Array.isArray === 'function') return Array.isArray(v);
+    return getTypeOf(v) === '[object Array]';
 }
-function isString(arr) {
-    return getTypeOf(arr) === '[object String]';
+function isString(v) {
+    return getTypeOf(v) === '[object String]';
 }
-function isNumber(arr) {
-    return getTypeOf(arr) === '[object Number]';
+function isNumber(v) {
+    return getTypeOf(v) === '[object Number]';
 }
+function isUndefined(v) {
+    return getTypeOf(v) === '[object Undefined]';
+}
+function isSymbol(v) {
+    return getTypeOf(v) === '[object Symbol]';
+}
+function isArrayBuffer(v) {
+    return getTypeOf(v) === '[object ArrayBuffer]';
+}
+function isDate(v) {
+    return getTypeOf(v) === '[object Date]';
+}
+function isMap(v) {
+    return getTypeOf(v) === '[object Map]';
+}
+function isWeakMap(v) {
+    return getTypeOf(v) === '[object WeakMap]';
+}
+function isSet(v) {
+    return getTypeOf(v) === '[object Set]';
+}
+function isWeakSet(v) {
+    return getTypeOf(v) === '[object WeakSet]';
+}
+function isInt8Array(v) {
+    return getTypeOf(v) === '[object Int8Array]';
+}
+function isInt16Array(v) {
+    return getTypeOf(v) === '[object Int16Array]';
+}
+function isError(v) {
+    return getTypeOf(v) === '[object Error]';
+}
+function isEvalError(v) {
+    return getTypeOf(v) === '[object EvalError]';
+}
+function isDataView(v) {
+    return getTypeOf(v) === '[object DataView]';
+}
+function isFloat32Array(v) {
+    return getTypeOf(v) === '[object Float32Array]';
+}
+function isFloat64Array(v) {
+    return getTypeOf(v) === '[object Float64Array]';
+}
+
+
 
 // getTypeOf(NaN); // Number
 // getTypeOf(true);
